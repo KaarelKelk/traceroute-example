@@ -2,7 +2,7 @@
 // You should commit this file to source control.
 // Learn more about this file at https://docs.edg.io/guides/edgio_config
 module.exports = {
-  connector: '@edgio/next',
+  connector: "@edgio/next",
 
   // The name of the site in Edgio to which this app should be deployed.
   // name: 'my-site-name',
@@ -49,14 +49,13 @@ module.exports = {
   // that need to be dynamically required at runtime such as build manifests for server-side rendering
   // or other config files are present in the cloud.
   //
-  // includeFiles: {
-  //   'lang/**/*': true, // Just includes the specified files
-  //   'content/**/*': 'another/dir/in/edgio/lambda', // Copies the files into specific directory within Edgio build
-  // },
+  includeFiles: {
+    [`bin/*`]: true,
+  },
 
   // Set to true to include all packages listed in the dependencies property of package.json when deploying to Edgio.
   // This option generally isn't needed as Edgio automatically includes all modules imported by your code in the bundle that
   // is uploaded during deployment
   //
   // includeNodeModules: true,
-}
+};
